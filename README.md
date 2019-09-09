@@ -1,24 +1,12 @@
-# README
+# Timing tool API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the backend API for the timing tool app. The Timinig tool app is a MAC application used for
+timing your daily activities, tasks, and projects.
 
-Things you may want to cover:
+## Development
 
-* Ruby version
+Run locally: `bundle exec foreman start` and then view it on http://localhost:3000
 
-* System dependencies
+## Testing
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run all tests: `bundle exec rspec` or running guard for continous testing `bundle exec guard`.
