@@ -10,3 +10,11 @@ Run locally: `bundle exec foreman start` and then view it on http://localhost:30
 ## Testing
 
 Run all tests: `bundle exec rspec` or running guard for continous testing `bundle exec guard`.
+
+## Deployment
+
+Deployment is done via [CI/CD](https://circleci.com).
+
+## Errors / Exceptions
+
+Errors and exceptions are collected via [Sentry.io](https://sentry.io).

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -10,14 +12,14 @@ gem 'rails', '~> 6.0.0'
 gem 'pg', '>= 0.18', '< 2.0'
 
 # Build JSON APIs
-gem "fast_jsonapi"
+gem 'fast_jsonapi'
 
 # Use Redis adapter to run Action Cable in production
+gem 'hiredis', '~> 0.6'
 gem 'redis', '~> 4.0'
-gem "hiredis", "~> 0.6"
 
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -29,14 +31,18 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # gem 'rack-cors'
 
 # Web server
-gem "puma"
+gem 'puma'
+
+gem 'sidekiq'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem "foreman"
-  gem "guard-rspec"
-  gem "rspec-rails"
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'foreman'
+  gem 'guard-rspec'
+  gem 'rspec-rails'
+  gem 'rubocop'
+  gem "shoulda-matchers"
 end
 
 group :development do
@@ -47,4 +53,4 @@ group :development do
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
